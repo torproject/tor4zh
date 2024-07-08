@@ -7,7 +7,7 @@ Tor 是一款帮你私密浏览互联网的工具。它不仅能使你免受监�
 1. 获得 Tor 浏览器桌面版和 Android 版
 
 - Tor 浏览器的官方网站。中国大陆地区不能直接访问这个网站，需要翻墙。https://www.torproject.org/zh-CN/download/
-- 如果不能翻墙访问官方网站，也可以从 Tor 官方指定的镜像网站下载。https://tor.calyxinstitute.org/zh-CN/download/
+- 如果不能翻墙访问官方网站，也可以从 Tor 官方指定的镜像网站下载。https://tor.calyxinstitute.org/zh-CN/download/ 或 https://sem.grampo.org/zh-CN/download/
 - 如果你能使用 Telegram，可以关注这个机器人 https://t.me/gettor_bot 找它要 Tor 浏览器的下载链接。
 - 如果你习惯使用 Email，也可以发邮件给 gettor@torproject.org 索取 Tor 浏览器的下载链接。记得在邮件标题里注明你的电脑操作系统名称，比如 Windows，macOS 或者 Linux。邮件正文留白就行。为了你的安全，不要使用 QQ、163 这些中国的邮件服务。
 
@@ -17,23 +17,37 @@ Onion Browser 是运行在 iOS 设备上的 Tor 浏览器。
 
 遗憾的是，如果你使用中国区 Apple ID, 那你可能无法在 App Store 找到 Onion Browser. 你需要想办法先拥有一个【非中国区】的 Apple ID, 才能在 App Store 下载它。
 
+另外，Onion Browser 需要与 Orbot 搭配使用，你也可以从 App Store 找到 Orbot。
+
 ### 在中国怎样连接到 Tor 网络？
 
-Tor 的所有公开节点都已被 GFW 封锁。为了解决这个问题，Tor 提供几种“可插拔式传输器”（Pluggable Transports）用于突破封锁。目前共有四种：obfs4/meek/Snowflake/WebTunnel，其中meek在中国大陆已经几乎无法使用，以下介绍另外三种。
+1. Tor 的所有公开节点都已被 GFW 封锁。为了解决这个问题，Tor 提供几种“可插拔式传输器”（Pluggable Transports）用于突破封锁。目前共有四种：obfs4/meek/Snowflake/WebTunnel，其中meek在中国大陆已经几乎无法使用，以下介绍另外三种。
 
 - obfs4 会将上网流量伪装成随机数据流量。如果在 Tor 浏览器的“内置网桥”里选择 obfs4 网桥，在中国大陆可能也很难连上。一般需要手动添加 obfs4 网桥。
 - Snowflake 能把用户的 Tor 流量伪装成视频通话。在 Tor 浏览器的“内置网桥”里选择 Snowflake 就行，无须更多配置。
 - WebTunnel 使用户的 Tor 流量看上去像普通的 HTTPS 流量。WebTunnel 网桥需要专门获取，手动添加。
 
-以下这些方式可以帮你获得 obfs4 网桥或者 WebTunnel 网桥。
+2. 以下这些方式可以帮你获得 obfs4 网桥或者 WebTunnel 网桥。
 
 - 从 Tor 的官方网站获取 https://bridges.torproject.org/
 - 发邮件给 bridges@torproject.org ，只支持 Gmail 和 Riseup 邮箱。
 - 添加 Telegram 机器人 https://t.me/GetBridgesBot 获取
 
-手动添加网桥的位置：进入 Tor 浏览器，找到【设置】→【连接】→【网桥】→【添加新网桥】→【手动添加网桥】。把前面复制的网桥地址完整地粘贴在这里，点击“确认”即可。
+3. 通过以上方式获取网桥以后，你需要向 Tor 浏览器手动添加网桥。
 
-**如果以上途径获得的网桥无法正常连接，请发邮件给 frontdesk@torproject.org ，索取专门针对中国用户的网桥。你只需在邮件标题里写上“private bridge cn”即可收到回复。**
+- 13.5 版本的 Tor 浏览器桌面版：
+
+手动添加网桥的位置：在 Tor 浏览器里找到汉堡菜单（即右上角的图标 ≡），依次点击【设置】→【连接】→【网桥】→【替换网桥】，把前面复制的网桥地址完整的粘贴在这里，点击“确认”即可。
+
+- 低于 13.5 版本的 Tor 浏览器桌面版：
+
+手动添加网桥的位置：在 Tor 浏览器里找到汉堡菜单（即右上角的图标 ≡），依次点击【设置】→【连接】→【网桥】→【添加新网桥】→【手动添加网桥】，把前面复制的网桥地址完整的粘贴在这里，点击“确认”即可。
+
+- 13.5 版本的 Tor 浏览器 Android 版：
+
+手动添加网桥的位置：在 Tor 浏览器里点击“配置连接”，或者点击右上角的齿轮图标，进入设置，依次点击【配置网桥】→【使用网桥】→【输入已知网桥】，把前面复制的网桥地址完整的粘贴在这里，点击“确定”即可。
+
+4. **如果以上途径获得的网桥无法正常连接，请发邮件给 frontdesk@torproject.org ，索取专门针对中国用户的网桥。你只需在邮件标题里写上“private bridge cn”即可收到回复。**
 
 ### 怎样可以获得帮助支持？
 
