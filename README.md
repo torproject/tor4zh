@@ -21,13 +21,12 @@ Onion Browser 是运行在 iOS 设备上的 Tor 浏览器。
 
 ### 在中国怎样连接到 Tor 网络？
 
-1. Tor 的所有公开节点都已被 GFW 封锁。为了解决这个问题，Tor 提供几种“可插拔式传输器”（Pluggable Transports）用于突破封锁。目前共有四种：obfs4/meek/Snowflake/WebTunnel，其中meek在中国大陆已经几乎无法使用，以下介绍另外三种。
+1. Tor 的所有公开节点都已被 GFW 封锁。为了解决这个问题，Tor 提供几种“可插拔式传输器”（Pluggable Transports）用于突破封锁。目前共有三种：meek/Snowflake/WebTunnel，其中 meek 在中国大陆已经几乎无法使用，以下介绍另外两种。
 
 - WebTunnel 使用户的 Tor 流量看上去像普通的 HTTPS 流量。WebTunnel 网桥需要专门获取，手动添加。
-- obfs4 会将上网流量伪装成随机数据流量。如果在 Tor 浏览器的“内置网桥”里选择 obfs4 网桥，在中国大陆可能也很难连上。一般需要手动添加 obfs4 网桥。
 - Snowflake 能把用户的 Tor 流量伪装成视频通话。在 Tor 浏览器的“内置网桥”里选择 Snowflake 就行，无须更多配置。
 
-2. 以下这些方式可以帮你获得 obfs4 网桥或者 WebTunnel 网桥。
+2. 以下这些方式可以帮你获得 WebTunnel 网桥。
 
 - 从 Tor 的官方网站获取 https://bridges.torproject.org/
 - 发邮件给 bridges@torproject.org ，只支持 Gmail 和 Riseup 邮箱。
